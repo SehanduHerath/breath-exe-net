@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breathing Exercise</title>
+    <link rel="stylesheet" href="breathing-exercise.component.css">
+
+    
+</head>
+<body>
+    <div class="left-container">
+
+    <div class="timer-container">
+        <div id="exercise">{{ exerciseMessage }}</div>
+        <div id="timer" *ngIf="showTimer">{{ timer }}</div>
+    </div>    
+        <button id="start" (click)="startExercise()" [disabled]="startDisabled">Start</button>
+        <button id="restart" (click)="restartExercise()" [disabled]="!startDisabled">Restart</button>
+    </div>
+    <div id="progress" [style.width]="progressWidth + '%'"></div>
+        <img class="right" src="assets/Images/9c0734100731535.5f0f2ac318fee.gif" alt="Breathing Exercise GIF">
+        <div id="message" *ngIf="exerciseCompleted">Congratulations! You've completed the exercise.</div>
+        <button id="done" *ngIf="exerciseCompleted" (click)="restartExercise()">Done</button>
+
+</body>
+</html>

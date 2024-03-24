@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2e7e5;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+/* Encapsulate all items in a container for better control */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%; /* Adjust based on your preference */
+}
+
+/* Adjust the styling and positioning of the exercise text */
+#exercise {
+    font-size: 3em; /* Adjust if needed */
+    color: #14205a; /* Text color */
+    margin-bottom: 0px;
+    order: -1; /* Removes bottom margin if any */
+    /* Position the text above the timer without specific positioning */
+  }
+
+/* Use flexbox to keep the timer and buttons aligned vertically */
+.left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 60px;
+    gap: 50px;
+     /* Space between timer and buttons */
+  }
+
+/* Adjust the styling for the timer */
+/* Container for the exercise text and the circular timer */
+.timer-container {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust this value as needed for space between "Exhale" text and the timer */
+  }
+  /* Circular timer styling */
+  #timer {
+    font-size: 3em; /* Large font size for the timer */
+    color: #14205a; /* Text color */
+    border: 10px solid #9db5f3; /* Circular border with a color */
+    border-radius: 50%; /* Makes the border circular */
+    padding: 20px; /* Space inside the border */
+    width: 200px; /* Width of the circle */
+    height: 200px; /* Height of the circle */
+    display: flex;
+    justify-content: center; /* Aligns content horizontally */
+    align-items: center; /* Aligns content vertically */
+    margin: 0; /* Removes default margin */
+    /* No need for absolute positioning */
+  }
+  
+/* Style buttons with a fixed width and margin */
+#start, #restart ,#done {
+    padding: 12px 50px; 
+    margin: 1%;
+
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+
+    font-family: Inter; 
+    font-size: 18px; 
+    font-weight: 400; 
+    line-height: 28px;
+
+    color: #FFFFFF; /* white */
+    background-color: #274B54; 
+
+    opacity: 1; 
+    border: none; 
+    border-radius: 8px;
+    transition: 0.5s ease-out;
+  }
+
+/* Additional styles for progress bar and done button */
+#progress {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #274b54; /* Example color, replace with the correct one */
+  }
+
+.right-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right-align the image and remove float */
+img.right {
+    width: 40%; /* Fixed width for the image */
+    height: auto; /* Height will scale automatically */
+    margin-top: 20px;
+    margin-left: 60px; /* Space above the image */
+  }
+
+/* Adjust message styles if needed */
+#message {
+    font-family: Inter; 
+    font-size: 18px; 
+    font-weight: 400; 
+    /* ... existing styles ... */
+}
+
+/* Remove hover effect that enlarges buttons, as this can shift layout */
+#start:hover, #restart:hover, #done:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
